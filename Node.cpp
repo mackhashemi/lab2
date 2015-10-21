@@ -16,7 +16,7 @@ template <class ItemType> Node <ItemType>::Node(const ItemType& anItem):
 
 
 template <class ItemType> Node <ItemType>::Node(const ItemType &anItem,
-												Node <ItemType>* nextNodePtr):
+						Node <ItemType>* nextNodePtr):
   item(anItem),
   next(nextNodePtr)
 {
