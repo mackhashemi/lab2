@@ -10,13 +10,15 @@ template <class ItemType>
 class LinkedList : public ListInterface <ItemType>
 {
 private:
-    Node <ItemType> item;
-    Node <ItemType>* next;
-    Node <ItemType>* prev;
+    Node<ItemType>* head;
+    int count;
+
+    Node<ItemType>* getNodeAt(int position) const;
 
 public:
 
     LinkedList(); // Default constructor
+    LinkedList(const LinkedList<ItemType>& list);
     virtual ~LinkedList(); // Destructor
 
     // Linked List Operations

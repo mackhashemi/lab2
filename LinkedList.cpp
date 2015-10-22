@@ -2,7 +2,28 @@
 
 #include "LinkedList.h"
 
-template <class ItemType> LinkedList <ItemType>::LinkedList()
+
+template<class ItemType> Node<ItemType>*
+LinkedList<ItemType>::getNodeAt(int position) const
+{
+  // TODO: handle cases where position is out of range
+
+  Node<ItemType>* curr = head;
+  for (int skip = 1; skip < position; skip++)
+    {
+      curr = curr->getNext();
+    }
+
+  return curr;
+}
+
+template <class ItemType> LinkedList <ItemType>::LinkedList() :
+  head(nullptr), count(0)
+{
+}
+
+
+template <class ItemType> LinkedList <ItemType>::LinkedList(const LinkedList<ItemType>& list)
 {
 }
 
@@ -14,18 +35,19 @@ template <class ItemType> LinkedList <ItemType>::~LinkedList()
 
 template <class ItemType> bool LinkedList <ItemType>::isEmpty() const
 {
-  return false;
+  return (count == 0);
 }
 
 
 template <class ItemType> int LinkedList <ItemType>::getLength() const
 {
-  return 0;
+  return count;
 }
 
 
 template <class ItemType> bool LinkedList <ItemType>::insert(int newPosition, const ItemType& newEntry)
 {
+
   return false;
 }
 
@@ -43,9 +65,9 @@ template <class ItemType> void LinkedList <ItemType>::clear()
 
 template <class ItemType> ItemType LinkedList <ItemType>::getEntry(int position)  const
 {
-  ItemType x;
-
-  return x;
+  // TODO: handle cases where position is out of bounds
+  Node<ItemType>* nodePtr = getNodeAt(position);
+  return nodePtr->getItem();
 }
 
 
