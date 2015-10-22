@@ -5,6 +5,13 @@
 #include "ListInterface.h"
 #include "Node.h"
 
+
+#ifdef _DEBUG
+#include <iostream>
+using namespace std;
+#endif
+
+
 template <class ItemType>
 
 class LinkedList : public ListInterface <ItemType>
@@ -29,6 +36,11 @@ public:
     void clear();
     ItemType getEntry(int position) const;
     void setEntry(int position, const ItemType& newEntry);
+
+#ifdef _DEBUG
+    // For unit test use with integers
+    void print();
+#endif
 
 }; // end LinkedList
 
