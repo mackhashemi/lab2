@@ -30,6 +30,7 @@ template <class ItemType> LinkedList <ItemType>::LinkedList(const LinkedList<Ite
 
 template <class ItemType> LinkedList <ItemType>::~LinkedList()
 {
+  clear();
 }
 
 
@@ -107,6 +108,10 @@ template <class ItemType> bool LinkedList <ItemType>::remove(int position)
 
 template <class ItemType> void LinkedList <ItemType>::clear()
 {
+  while (!isEmpty())
+    {
+      remove(1);
+    }
   return;
 }
 
