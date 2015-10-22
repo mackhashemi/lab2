@@ -10,7 +10,7 @@ template <class ItemType>
 class LinkedList : public ListInterface <ItemType>
 {
 private:
-    Node<ItemType>* head;
+    Node<ItemType>* headPtr;
     int count;
 
     Node<ItemType>* getNodeAt(int position) const;
