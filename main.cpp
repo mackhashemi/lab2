@@ -7,28 +7,27 @@ using namespace std;
 int main(void)
 {
 
-  //int i;
+  int i;
 
   Stack<int> stack;
 
-#if 0
-  s.push(6);
-  s.push(2);
-  s.push(3);
+  cout << "Stack empty? : " << stack.isEmpty() << endl;
 
-  i = s.peek();
+  stack.push(1);
+  stack.push(2);
+  stack.push(3);
+
+  i = stack.peek();
   cout << "peek 1 is " << i << endl;
+  stack.pop();
 
-  s.pop();
-
-  i = s.peek();
+  i = stack.peek();
   cout << "peek 2 is " << i << endl;
+  stack.pop();
 
-  s.pop();
-
-  i = s.peek();
+  i = stack.peek();
   cout << "peek 3 is " << i << endl;
-#endif
+  stack.pop();
 
   return 0;
 }
