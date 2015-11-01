@@ -2,9 +2,7 @@
 #ifndef _LINKED_LIST
 #define _LINKED_LIST
 
-#include "ListInterface.h"
 #include "Node.h"
-
 
 #ifdef _DEBUG
 #include <iostream>
@@ -14,7 +12,7 @@ using namespace std;
 
 template <class ItemType>
 
-class LinkedList //: public ListInterface <ItemType>
+class LinkedList
 {
 private:
     Node<ItemType>* headPtr;
