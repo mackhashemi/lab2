@@ -14,7 +14,7 @@ using namespace std;
 
 template <class ItemType>
 
-class LinkedList : public ListInterface <ItemType>
+class LinkedList //: public ListInterface <ItemType>
 {
 private:
     Node<ItemType>* headPtr;

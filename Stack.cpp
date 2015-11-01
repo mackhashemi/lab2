@@ -17,8 +17,7 @@ Stack<ItemType>::~Stack()
 template <class ItemType>
 bool Stack<ItemType>::isEmpty() const
 {
-  //return list<ItemType>.isEmpty();
-  return false;
+  return list.isEmpty();
 }
 
 
@@ -41,7 +40,3 @@ ItemType Stack<ItemType>::peek() const
 {
   return list.getEntry(1);
 }
-
-
-
-
